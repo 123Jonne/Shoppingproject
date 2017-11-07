@@ -1,7 +1,7 @@
 angular.module('app')
 	.config(['$stateProvider', '$urlRouterProvider','$locationProvider', function ($stateProvider, $urlRouterProvider,$locationProvider) {
 
-		$urlRouterProvider.otherwise('/home');
+		$urlRouterProvider.otherwise('/register');
 
 		$stateProvider
 			.state('main', {
@@ -13,7 +13,17 @@ angular.module('app')
 				url: '/home',
 				templateUrl: '/templates/home/home.html'
 			})
-
+			.state('register', {
+				url: '/register',
+				templateUrl: '/templates/register/register.html',
+				cache: false,
+				controller: 'registerController',
+				resolve: {
+					des: ['$ocLazyLoad', function ($ocLazyLoad) {
+						return $ocLazyLoad.load('register');
+					}]
+				}
+			})
 			$locationProvider.html5Mode(true);
 			
 }])

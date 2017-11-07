@@ -1,0 +1,73 @@
+.register .btn{
+	background-color: #E42112;
+	color: #FFFFFF;
+	width: 50px;
+	height:30px;
+	float: left;
+	border-radius: 5px 0px 0px 5px;
+	line-height: 30px;
+	
+}
+.register .frame{
+	border: 1px solid #E42112;
+	width: 102px;
+	border-radius: 5px;
+	height: 32px;
+	margin: 4px auto 3px auto;
+	text-align: center;
+}
+.register .btn1{
+	width: 50px;
+	height: 30px;
+	color: #000000;
+	float: right;
+	line-height: 30px;
+}
+.register .header{
+	margin-top: 30px;
+}
+.register .list{
+	margin-top: 30px;
+	border-top: none;
+}
+ .register .x{
+	text-decoration: underline;
+	color: #AAAAAA;
+	display: block;
+	text-align: right;
+	margin-right: 15px;
+	margin-top: 15px;
+}
+ .register .item1{
+	
+	border: none;
+}
+
+ 
+  .register .i{
+ 	margin-right: 22px; margin-left: 5px;
+ }
+ .register .span{
+ 	margin-right: 35px;
+ }
+ .register .eye{
+ 	margin-right: 15px; margin-left: 5px;
+ 	
+ }
+ .register  .get{
+ 	min-height: 0px;
+    line-height: 28px;
+    margin-right: 14px;
+    font-size: 12px;
+    border-radius: 0px;
+ }
+ .checkbox{
+ 	overflow: hidden;
+ }
+ .agree{
+ 	border: none;
+ 	margin-left: -20px;
+ 	padding-left: 45px;
+ 	font-size: 14px;
+ 	border-radius: 0;
+ }

@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/123Jonne/Shoppingproject/issues"
   },
-  "homepage": "https://github.com/123Jonne/Shoppingproject#readme"
+  "homepage": "https://github.com/123Jonne/Shoppingproject#readme",
+  "devDependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "serve-favicon": "^2.4.5"
+  }
 }

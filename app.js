@@ -1,34 +1,52 @@
 global.__basename=__dirname;
 
+
 const express=require('express');
-const ejs=require('ejs');//µ¼ÈëÒýÇæ
+
+const ejs=require('ejs');
+
+const favicon=require('serve-favicon');
 
 const app=express();
+
 const routes=require(__basename+'/routes/routes.js');
 
-//ÉèÖÃ¾²Ì¬×ÊÔ´Â·¾¶
+app.use(favicon(__basename+'/web/public/images/icons/img_79.ico'));
+app.use(express.static(__basename+'/web/public'));
+app.use(express.static(__basename+'/web/views'));
+app.use(express.static(__basename+'/web'));
 
-app.use(express.static(__basename + '/web/public'));
-app.use(express.static(__basename + '/web/views'));
-app.use(express.static(__basename + '/web'));
-//ÉèÖÃÊÓÍ¼ÒýÇæ
-app.set('views', __basename + '/web/views');
-app.set('view engine', 'html');
-app.engine('.html', ejs.__express);
-//¼ÓÔØËùÓÐÂ·ÓÉ
+//è®¾ç½®è§†å›¾å¼•æ“Ž
+app.set('views',__basename+'/web/views');
+app.set('view engine','html');
+app.engine('.html',ejs.__express);
+
+
+/*app.use(bodyParser.json());*/
+
 routes(app);
 
 
-//404´¦Àí
+
+
+
+
+
+
+
+
+
+
+//404å¤„ç†
 app.use((req,res)=>{
 	res.status(404);
-	res.send('Ò³Ãæ²»´æÔÚ');
+	res.send('é¡µé¢ä¸å­˜åœ¨');
 });
-//500´¦Àí
-app.use((err,req,res)=>{
+//500å¤„ç†
+app.use((req,res)=>{
 	res.status(500);
-	res.send('·þÎñÆ÷´íÎó');
+	res.send('æœåŠ¡å™¨é”™è¯¯');
 });
 app.listen(9898,()=>{
-	console.log('·þÎñÆ÷ÔËÐÐÓÚ127.0.0.1:9898');
-});
+	console.log('æœåŠ¡å™¨è¿è¡ŒäºŽ127.0.0.1:9898ç«¯å£');
+})
