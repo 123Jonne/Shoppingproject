@@ -21,30 +21,8 @@ app.config(["$provide", "$compileProvider", "$controllerProvider", "$filterProvi
 		 				'/templates/register/registerController.js',
 		 				'/templates/register/register.css'
 		 			]
-		 		},
-		 		/*
-		 			{
-		 			name: 'login',
-		 			files: [
-		 				'/templates/login/loginController.js',
-		 				'/templates/login/login.css'
-		 			]
-		 		},*/
-		 			/*{
-		 			name: 'main.home',
-		 			files: [
-		 				'/templates/home/homeController.js',
-		 				'/templates/home/home.css'
-		 			]
-		 		},*/
-		 		
-		 		/*{
-		 			name: 'details',
-		 			files: [
-		 				'/templates/details/detailsController.js',
-		 				'/templates/details/details.css'
-		 			]
-		 		}*/
+		 		}
+
 		 		
 		 		
 	 		]

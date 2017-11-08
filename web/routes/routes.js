@@ -16,7 +16,6 @@ angular.module('app')
 			.state('register', {
 				url: '/register',
 				templateUrl: '/templates/register/register.html',
-				cache: false,
 				controller: 'registerController',
 				resolve: {
 					des: ['$ocLazyLoad', function ($ocLazyLoad) {

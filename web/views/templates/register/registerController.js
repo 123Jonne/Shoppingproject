@@ -8,12 +8,15 @@
 				};
 				$scope.register=function(){
 		
-			if (utils.validForm.isNotEmpty($scope.data.phone)) {
-				if (!utils.validForm.isPhone($scope.data.phone)) {
+			if (!utils.validForm.isNotEmpty($scope.data.phone)) {
+				utils.tips.showTips('手机号不能为空');
+				return false;
+				}
+				else if (!utils.validForm.isPhone($scope.data.phone)) {
 					utils.tips.showTips('手机号码格式不正确');
 					return false;
 				}
-			}
+			
 			if (!utils.validForm.isNotEmpty($scope.data.pwd)) {
 				utils.tips.showTips('密码不能为空');
 				return false;
