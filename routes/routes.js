@@ -1,7 +1,9 @@
-module.exports=function(app){
+const RoutesController = require(__basename + '/routesController/routesController.js');
+
+module.exports = function(app) {
 	//加载所有路由
-app.get('/',(req,res)=>{
-res.render('成功');
-});
+	app.get('/', RoutesController.homeController);
+	app.post('/register', RoutesController.registerController);
+	app.post('/sendSMS', RoutesController.sendSMSController);
 
 }

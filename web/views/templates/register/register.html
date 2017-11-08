@@ -1,22 +1,21 @@
-
-		<ion-header-bar class="bar-light header register">
-			<div class="buttons">
-				<button class="button button-light icon ion-chevron-left button-clear button-large button-dark"></button>
-			</div>
-			<h1 class="title">
+<ion-header-bar class="bar-light header register">
+	<div class="buttons">
+		<button class="button button-light icon ion-chevron-left button-clear button-large button-dark"></button>
+	</div>
+	<h1 class="title">
       	<div class="frame">
       		<div class="btn">登录</div>
       		<div class="btn1">注册</div>
       	</div>
       </h1>
-			<div class="buttons">
-				<button class="button button-dark button-clear">帮助</button>
-				</button>
-			</div>
-		</ion-header-bar>
-		<ion-content class="register">
-			<ion-list class="list">
-				<label class="item item-input ">
+	<div class="buttons">
+		<button class="button button-dark button-clear">帮助</button>
+		</button>
+	</div>
+</ion-header-bar>
+<ion-content class="register">
+	<ion-list class="list">
+		<label class="item item-input ">
 			    	<span class="input-label">手机</span>
 			    	<input type="text" placeholder="请输入手机号" ng-model="data.phone">
 			    	<span class="span"> 
@@ -24,7 +23,7 @@
 			   <i class="icon i"></i>
 			    </span>
 			  </label>
-				<label class="item item-input ">
+		<label class="item item-input ">
 			    	<span class="input-label">设置密码</span>
 			    	<input type="password" placeholder="请输入密码" ng-model="data.pwd">
 			    	<span class="span" > 
@@ -32,7 +31,7 @@
 			     <i class="icon ion-eye  placeholder-icon eye"></i>
 			    </span>
 			  </label>
-			  <label class="item item-input ">
+		<label class="item item-input ">
 			    	<span class="input-label">确认密码</span>
 			    	<input type="password" placeholder="请再次输入密码"  ng-model="data.cpwd">
 			    	<span class="span" > 
@@ -40,25 +39,24 @@
 			     <i class="icon ion-eye  placeholder-icon eye"></i>
 			    </span>
 			  </label>
-			  <label class="item item-input " style="margin: 0px 0px;">
+		<label class="item item-input " style="margin: 0px 0px;">
 			    	<span class="input-label">验证码</span>
-			    	<input type="text" placeholder="请输入验证码">
+			    	<input type="text" placeholder="请输入验证码"  ng-model="data.yzm">
 			    	<span class="span" > 
 			    <div class="btns">
-			    	<button class="button button-positive get">获取验证码</button>
+			    	<button class="button button-positive get" ng-click="getSMSCode()">获取验证码</button>
 			    </div>
 			    </span>
 			  </label>
-			    <label class="item item-input ">
+		<label class="item item-input ">
 			    	
 			     <ion-checkbox class=" checkbox-assertive checkbox-square agree">同意用户协议</ion-checkbox>
 			   
 			  </label>
-			</ion-list>
-		
-			<div class="item item1">
-				<button class="button button-assertive button-block " ng-click="register();">注册</button>
-			</div>
+	</ion-list>
 
-			
-		</ion-content>
+	<div class="item item1">
+		<button class="button button-assertive button-block " ng-click="register();">注册</button>
+	</div>
+
+</ion-content>

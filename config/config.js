@@ -8,5 +8,5 @@ exports.mysqlOptions={
 	host:server.host,
 	user:'root',
 	password:'',
-	database:'shoppingproject'
+	database:'Shoppingproject'
 }
