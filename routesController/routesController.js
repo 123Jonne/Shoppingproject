@@ -14,12 +14,14 @@ class RoutesController {
 	homeController (req, res) {
 		res.render('index');
 	}
+
+
 registerController (req, res) {
 		let sql = SQL.findOneForReg(req.body.phone);
 		service.query(sql)
 			.then((result) => {
 				if (Array.isArray(result) && result.length === 0) {
-					utils.addCrypto(req.body, 'phone');
+					utils.addCrypto(req.body, 'pwd');
 					let insertsql = SQL.insertOneForReg(req.body);
 					service.query(insertsql)
 						.then((result) => {
@@ -47,14 +49,13 @@ loginController (req, res) {
 					}
 					res.send(result);
 				} else {
-					res.send(common.login.warning);
+					res.send([common.login.warning]);
 				}
 			})
 			.catch((err) => {
-				res.send(common.login.error);
+				res.send([common.login.error]);
 			})
 	}
-
 
 
 	sendSMSController (req, res) {

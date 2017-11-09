@@ -16,7 +16,7 @@ angular.module('app')
 					utils.tips.hideLoadTips();
 					showTips(data.data[0].msg);
 					if (data.data[0].code === 200) {
-						$rootScope.user.uid = data.data[0].uid;
+						$rootScope.user.id = data.data[0].id;
 						$rootScope.user.phone = data.data[0].phone;
 						$timeout(function () {
 							$scope.tips.close();

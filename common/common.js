@@ -6,7 +6,7 @@ module.exports={
 		},
 		warning: {
 			code:101,
-			msg:'邮箱已被注册'
+			msg:'手机号已被注册'
 		},
 		error: {
 			code:102,
@@ -20,7 +20,7 @@ module.exports={
 		},
 		warning: {
 			code:201,
-			msg:'邮箱或密码错误'
+			msg:'手机号码或密码错误'
 		},
 		error: {
 			code:102,
