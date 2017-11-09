@@ -1,34 +1,75 @@
 angular.module('app')
-.factory('utils',['$ionicPopup',function($ionicPopup){
-	var u={
-		tips: {
-			showTips:function(msg,scope){
-		        var tips=$ionicPopup.show({
-				template:'<div style="text-align:content;">'+msg+'<div>',
-				title:'提示消息',
-				scope:scope,
-				buttons:[
-				{
-					text:'确认',
-					type:'button-assertive',
-					onTap:function(){
-                        tips.close();
-					}
+	.factory('utils', ['$ionicPopup', '$ionicLoading', '$ionicModal', function ($ionicPopup, $ionicLoading, $ionicModal) {
 
-				}
+		var u = {
 
-				]
-			});}
-	
-		},
+			//提示信息模块
+			tips: {
 
-		validForm:{
-			//验证不为空
-			isNotEmpty:function(msg){
+				showTips: function (msg, scope) {
+					scope.tips = $ionicPopup.show({
+						template: '<div style="text-align: center;">' + msg + '</div>',
+						title: '提示消息',
+						scope: scope,
+						buttons: [
+							{
+								text: '确认',
+								type: 'button-assertive',
+								onTap: function () {
+									scope.tips.close();
+								}
+							}
+						]
+					});
+				},
 
-				return msg==''||msg==undefined ?false :true;
+				showLoadTips: function () {
+    			$ionicLoading.show({
+    				noBackdrop: true,
+      			template: '<ion-spinner icon="lines" class="spinner-assertive"></ion-spinner>'
+    			});
+				},
+
+				hideLoadTips: function () {
+					$ionicLoading.hide();
+				},
+
+/*
+				initPopover: function (scope) {
+					$ionicModal.fromTemplateUrl('/templates/popover/popover.html', {
+					animation: 'slide-in-up',
+				    scope: scope
+				  }).then(function(popover) {
+				    scope.popover = popover;
+				  });
+				},
+
+				openPopover: function (scope) {
+					scope.popover.show();
+					
+				},
+
+				closePopover: function (scope) {
+					scope.popover.hide();
+				}*/
+
 
 			},
+
+			//验证表单模块
+			//策略者模式
+			validForm: {
+				//验证不为空
+				isNotEmpty: function (msg) {
+					return msg == '' || msg == undefined ? false : true;
+				},
+
+				//验证邮箱格式
+				isEmail: function (email) {
+					var reg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+					return reg.test(email);
+				},
+
 				//验证手机号码
 				isPhone: function (phone) {
 					var reg = /^1[358]\d{9}$/;
@@ -50,9 +91,9 @@ angular.module('app')
 					return a === b ? true : false;
 				}
 
-		}
+			}
 
-		
-	};
-	return u;
-}])
+		};
+
+		return u;
+	}])

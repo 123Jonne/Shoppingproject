@@ -23,6 +23,16 @@ angular.module('app')
 					}]
 				}
 			})
+			.state('login', {
+				url: '/login',
+				templateUrl: '/templates/login/login.html',
+				controller: 'loginController',
+				resolve: {
+					des: ['$ocLazyLoad', function ($ocLazyLoad) {
+						return $ocLazyLoad.load('login');
+					}]
+				}
+			})
 			$locationProvider.html5Mode(true);
 			
 }])

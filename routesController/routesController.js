@@ -6,7 +6,7 @@ const common = require(__basename + '/common/common.js');
 
 const utils = require(__basename + '/lib/utils/utils.js');
 
-/*const moment = require('moment');*/
+const moment = require('moment');
 
 class RoutesController {
 	constructor (){}
@@ -19,7 +19,7 @@ registerController (req, res) {
 		service.query(sql)
 			.then((result) => {
 				if (Array.isArray(result) && result.length === 0) {
-					utils.addCrypto(req.body, 'pwd');
+					utils.addCrypto(req.body, 'phone');
 					let insertsql = SQL.insertOneForReg(req.body);
 					service.query(insertsql)
 						.then((result) => {
@@ -36,6 +36,27 @@ registerController (req, res) {
 				res.send(common.register.error);
 			})
 	}
+loginController (req, res) {
+		utils.addCrypto(req.body, 'pwd');
+		let loginsql = SQL.findOneForLogin(req.body);
+		service.query(loginsql)
+			.then((result) => {
+				if (Array.isArray(result) && result.length === 1) {
+					for (var k in common.login.success) {
+						result[0][k] = common.login.success[k];
+					}
+					res.send(result);
+				} else {
+					res.send(common.login.warning);
+				}
+			})
+			.catch((err) => {
+				res.send(common.login.error);
+			})
+	}
+
+
+
 	sendSMSController (req, res) {
 		let time = new Date().getTime().toString();
 		let code = time.substr(time.length - 4, 4);
@@ -59,47 +80,6 @@ registerController (req, res) {
 
 
 module.exports = new RoutesController();
-	/*registerController (req, res) {
-		let sql = SQL.findOneForReg(req.body.phone);
-		service.query(sql)
-			.then((result) => {
-				if (Array.isArray(result) && result.length === 0) {
-					utils.addCrypto(req.body, 'pwd');
-					let insertsql = SQL.insertOneForReg(req.body);
-					service.query(insertsql)
-						.then((result) => {
-							res.send(common.register.success);
-						})
-						.catch((err) => {
-							res.send(common.register.error);
-						})
-				} else {
-					res.send(common.register.warning);
-				}
-			})
-			.catch((err) => {
-				res.send(common.register.error);
-			})
-	}*/
+	
 
-	/*loginController (req, res) {
-		utils.addCrypto(req.body, 'pwd');
-		let loginsql = SQL.findOneForLogin(req.body);
-		service.query(loginsql)
-			.then((result) => {
-				if (Array.isArray(result) && result.length === 1) {
-					for (var k in common.login.success) {
-						result[0][k] = common.login.success[k];
-					}
-					res.send(result);
-				} else {
-					res.send(common.login.warning);
-				}
-			})
-			.catch((err) => {
-				res.send(common.login.error);
-			})
-	}
-
-
-*/
+	
