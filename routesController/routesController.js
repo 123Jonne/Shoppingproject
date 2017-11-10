@@ -23,6 +23,7 @@ registerController (req, res) {
 				if (Array.isArray(result) && result.length === 0) {
 					utils.addCrypto(req.body, 'pwd');
 					let insertsql = SQL.insertOneForReg(req.body);
+					console.log('req.body=>',req.body);
 					service.query(insertsql)
 						.then((result) => {
 							res.send(common.register.success);
@@ -48,6 +49,7 @@ loginController (req, res) {
 						result[0][k] = common.login.success[k];
 					}
 					res.send(result);
+					console.log(result);
 				} else {
 					res.send([common.login.warning]);
 				}
@@ -71,10 +73,11 @@ loginController (req, res) {
 		utils.sendSMS(smsOptions, function (s) {
 			console.log('s ==> ', s);
 			if (s.Code == 'OK') {
-				res.json({msg: '短信发送成功, 请注意查收'});
+				res.json({msg: '短信发送成功, 请注意查收',code:code});
+				
 			}
 		}, function (err) {
-			res.json({msg: '短信验证码获取失败'});
+			res.json({msg: '短信验证码获取失败',code:code});
 		})
 	}
 }

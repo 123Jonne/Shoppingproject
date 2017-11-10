@@ -13,11 +13,14 @@ angular.module('app')
 			utils.tips.showLoadTips();
 			API.fetchPost('/login', $scope.data)
 				.then(function (data) {
+					console.log(data);
 					utils.tips.hideLoadTips();
 					showTips(data.data[0].msg);
 					if (data.data[0].code === 200) {
+
 						$rootScope.user.id = data.data[0].id;
 						$rootScope.user.phone = data.data[0].phone;
+						console.log("$rootScope.user.id=>",$rootScope.user.id);
 						$timeout(function () {
 							$scope.tips.close();
 							$state.go('main.home');

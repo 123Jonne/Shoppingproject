@@ -1,11 +1,11 @@
 angular.module('app')
-	.controller('registerController', ['$scope', '$timeout', '$state', 'utils', 'API', function ($scope, $timeout, $state, utils, API) {
+	.controller('registerController', ['$scope', '$rootScope','$timeout', '$state', 'utils', 'API', function ($scope,$rootScope, $timeout, $state, utils, API) {
 		$scope.data = {
 			phone: '',
 			pwd: '',
-			cpwd: ''
+			yzm: ''
 		};
-
+		
 		$scope.register = function () {
 			if (!validRegister()) {
 				return;
@@ -16,10 +16,14 @@ angular.module('app')
 					console.log('data ==> ', data);
 					utils.tips.hideLoadTips();
 					utils.tips.showTips(data.data.msg, $scope);
-					$timeout(function () {
+					if(data.data.code===100){
+						
+						$timeout(function () {
 						$scope.tips.close();
 						$state.go('login');
 					}, 3000);
+					}
+					
 				})
 				.catch(function (err) {
 					utils.tips.hideLoadTips();
@@ -56,6 +60,11 @@ angular.module('app')
 				showTips('两次密码不一致');
 				return false;
 			}
+			if (!utils.validForm.isEqual($scope.data.yzm, $rootScope.Code)) {
+				showTips('验证码错误');
+				return false;
+			}
+
 
 			return true;
 		}
@@ -63,11 +72,13 @@ angular.module('app')
 
         $scope.getSMSCode = function () {
 			utils.tips.showLoadTips();
-			API.fetchPost('/sendSMS', {PhoneNumbers: '13415619601'})
+			API.fetchPost('/sendSMS', {PhoneNumbers:$scope.data.phone})
 				.then(function (data) {
 					console.log('data ==> ', data);
 					utils.tips.hideLoadTips();
 					utils.tips.showTips(data.data.msg, $scope);
+					$rootScope.Code=data.data.code;
+					console.log($rootScope.Code);
 				})
 				.catch(function (err) {
 					utils.tips.hideLoadTips();
