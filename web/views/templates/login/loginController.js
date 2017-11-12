@@ -17,13 +17,12 @@ angular.module('app')
 					utils.tips.hideLoadTips();
 					showTips(data.data[0].msg);
 					if (data.data[0].code === 200) {
-
 						$rootScope.user.id = data.data[0].id;
 						$rootScope.user.phone = data.data[0].phone;
 						console.log("$rootScope.user.id=>",$rootScope.user.id);
 						$timeout(function () {
 							$scope.tips.close();
-							$state.go('main.home');
+							$state.go('main.index');
 						}, 1000);
 					}
 					

@@ -1,0 +1,42 @@
+.shoppingMall .tab-item:first-child{
+	color: #E42112;
+}
+.shoppingMall .tab-item{
+	color: #000000;
+}
+.shoppingMall .item-input 
+	{
+		height: 30px;
+		
+	}
+.shoppingMall .top{
+		font-size: 32px;
+		color: #000000;
+	}
+.shoppingMall .p4{
+		font-size: 12px;
+		color: #CCCCCC;
+	}
+ .shoppingMall .frame{
+		text-align: center;
+		
+	}
+.shoppingMall .p2{
+		font-size: 12px;
+		color: #CCCCCC;
+	}
+.shoppingMall .word1{
+		text-align: center;
+	}
+.shoppingMall .p1{
+		font-size: 14px;
+	}
+.shoppingMall .p{
+	font-size: 12px;
+}
+.shoppingMall .top{
+	margin-top: 30px;
+}
+.shoppingMall .shopp_lint{
+	margin-top: 30px;
+}

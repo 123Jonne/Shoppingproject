@@ -1,0 +1,29 @@
+.header{
+	background-image:url(../../img/MyQiangXu_bg_img@2x.png)  ;
+	
+}
+.ml{
+	display: flex;
+	align-items: center;
+	justify-content:space-between;
+}
+.middel img{
+	margin: auto;
+	max-width: 30px;
+	min-width: 25px;
+}
+.middel{
+	text-align: center;
+	}
+	.middel p{
+		font-size: 12px;
+	}
+	.icons>img{
+		max-width: 20px;
+		min-width: 15px;
+		float: left;
+		margin-right: 10px;
+	}
+	.icons:last-child{
+		margin-bottom: 40px;
+	}

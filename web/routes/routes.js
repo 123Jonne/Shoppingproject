@@ -9,9 +9,45 @@ angular.module('app')
 				abstruct:true,
 				templateUrl: '/templates/main/main.html'
 			})
-			.state('main.home', {
-				url: '/home',
-				templateUrl: '/templates/home/home.html'
+			.state('main.index', {
+				url: '/index',
+				templateUrl: '/templates/index/index.html',
+				controller: 'indexController',
+				resolve: {
+					des: ['$ocLazyLoad', function ($ocLazyLoad) {
+						return $ocLazyLoad.load('index');
+					}]
+				}
+			})
+				.state('main.shoppingcart', {
+				url: '/shoppingcart',
+				templateUrl: '/templates/shoppingcart/shoppingcart.html',
+				controller: 'shoppingcartController',
+				resolve: {
+					des: ['$ocLazyLoad', function ($ocLazyLoad) {
+						return $ocLazyLoad.load('shoppingcart');
+					}]
+				}
+			})
+				.state('main.my', {
+				url: '/my',
+				templateUrl: '/templates/my/my.html',
+				controller: 'myController',
+				resolve: {
+					des: ['$ocLazyLoad', function ($ocLazyLoad) {
+						return $ocLazyLoad.load('my');
+					}]
+				}
+			})
+				.state('main.shoppingMall', {
+				url: '/index',
+				templateUrl: '/templates/shoppingMall/shoppingMall.html',
+				controller: 'shoppingMallController',
+				resolve: {
+					des: ['$ocLazyLoad', function ($ocLazyLoad) {
+						return $ocLazyLoad.load('shoppingMall');
+					}]
+				}
 			})
 			.state('register', {
 				url: '/register',

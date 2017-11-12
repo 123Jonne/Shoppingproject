@@ -1,0 +1,99 @@
+body html{
+	height: 100%;
+}
+.index .input{
+
+}
+.index .list{
+	
+	margin: 0;
+}
+.index .button{
+	padding: 0;
+}
+.index .icon-right{
+	padding:  0 12px ;
+}
+.index .item-input{
+	height: 30px;
+}
+.index .line{
+	border-bottom: 1px  #808080 solid;
+	width: 100%;
+	
+}
+.index .block{
+	text-align: center;
+	width: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+	margin: 0 auto;
+}
+.index .line2{
+	width: 20%;
+	border-bottom: 3px solid #E42112;
+	float: left;
+}
+.index .line3{
+	width: 20%;
+	border-bottom: 3px solid #E42112;
+	float: right;
+}
+.index .word{
+
+	color: #E42112;
+	font-size: 20px;
+}
+.index .word1{
+	text-align: center;
+}
+.index .p1{
+	font-size: 14px;
+}
+.index .p2{
+	font-size: 12px;
+	color: #C0C0C0;
+}
+.index .p3
+{
+	font-size: 12px;
+}
+.index .right{
+	width: 100%;
+	border: 1px solid silver;
+	text-align: center;
+	padding: 5px;
+}
+.index .frame{
+	border: 1px solid silver;
+	width: 100%;
+	margin: 2px;
+	
+}
+.index .p3{
+	float: left;
+	color: #E42112;
+}
+ .index .p4{
+	float: right;
+	color: #C0C0C0;
+	font-size: 12px;
+}
+.index .last{
+	margin-bottom: 40px;
+}
+.index .item-input 
+	{
+		height: 30px;
+		
+	}
+.index .frist,.two{
+		padding: 0;
+	}
+.index .in_f{
+		margin: 7px 0;
+	}
+
+

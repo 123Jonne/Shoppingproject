@@ -15,6 +15,34 @@ app.config(["$provide", "$compileProvider", "$controllerProvider", "$filterProvi
 	 		debug: false,
 	 		events: false,
 	 		modules: [
+	 			{
+		 			name: 'index',
+		 			files: [
+		 				'/templates/index/indexController.js',
+		 				'/templates/index/index.css'
+		 			]
+		 		},
+		 		{
+		 			name: 'shoppingMall',
+		 			files: [
+		 				'/templates/shoppingMall/shoppingMallController.js',
+		 				'/templates/shoppingMall/shoppingMall.css'
+		 			]
+		 		},
+		 		{
+		 			name: 'shoppingcart',
+		 			files: [
+		 				'/templates/shoppingcart/shoppingcartController.js',
+		 				'/templates/shoppingcart/shoppingcart.css'
+		 			]
+		 		},
+		 		{
+		 			name: 'my',
+		 			files: [
+		 				'/templates/my/myController.js',
+		 				'/templates/my/my.css'
+		 			]
+		 		},
 		 		{
 		 			name: 'register',
 		 			files: [

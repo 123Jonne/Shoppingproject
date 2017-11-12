@@ -1,16 +1,21 @@
 <div ui-view></div>
-<ion-tabs class="tabs-assertive tabs-icon-top">
 
-  <ion-tab ui-sref="main.home" title="首页" icon-on="ion-ios-home" icon-off="ion-ios-home-outline">
-  </ion-tab>
-
-  <ion-tab ui-sref="main.find" title="发现" icon-on="ion-ios-paperplane" icon-off="ion-ios-paperplane-outline">
-  </ion-tab>
-
-  <ion-tab ui-sref="main.shopcart" title="购物车" icon-on="ion-ios-cart" icon-off="ion-ios-cart-outline">
-  </ion-tab>
-
-  <ion-tab title="我的" icon-on="ion-ios-person" icon-off="ion-ios-person-outline">
-  </ion-tab>
-
-</ion-tabs>
+		<div class="tabs tabs-icon-top">
+	<a class="tab-item">
+		<i class="icon ion-ios-home-outline assertive"></i>
+		<span class="assertive" ui-sref="index()">首页</span>
+	</a>
+	<a class="tab-item">
+		<i class="icon ion-ios-printer-outline dark"></i>
+		<span class="dark" ui-sref="shoppingMall()">商城  </span>
+	</a>
+	<a class="tab-item">
+		<i class="icon icon ion-ios-cart-outline dark"></i>
+		<span class="dark" ng-click="shoppingcart()">购物车</span>
+	</a>
+	<a class="tab-item">
+		<i class="icon ion-ios-person-outline dark"></i>
+		<span class="dark" ui-sref="my()">我的强旭</span>
+	</a>
+</div>
+		
