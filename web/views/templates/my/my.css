@@ -1,29 +1,34 @@
-.header{
-	background-image:url(../../img/MyQiangXu_bg_img@2x.png)  ;
+.my .header{
+	background-image:url(../../img/MyQiangXu_bg_img@2x.png);
 	
 }
-.ml{
+.my .tops{
+	
+    margin-top: 33px;
+}
+.my .ml{
+
 	display: flex;
 	align-items: center;
 	justify-content:space-between;
 }
-.middel img{
+.my .middel img{
 	margin: auto;
 	max-width: 30px;
 	min-width: 25px;
 }
-.middel{
+.my .middel{
 	text-align: center;
 	}
-	.middel p{
+.my	.middel p{
 		font-size: 12px;
 	}
-	.icons>img{
+.my	.icons>img{
 		max-width: 20px;
 		min-width: 15px;
 		float: left;
 		margin-right: 10px;
 	}
-	.icons:last-child{
+.my	.icons:last-child{
 		margin-bottom: 40px;
 	}

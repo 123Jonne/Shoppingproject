@@ -1,51 +1,54 @@
 angular.module('app')
 	.config(['$stateProvider', '$urlRouterProvider','$locationProvider', function ($stateProvider, $urlRouterProvider,$locationProvider) {
 
-		$urlRouterProvider.otherwise('/register');
+		$urlRouterProvider.otherwise('/login');
 
 		$stateProvider
 			.state('main', {
 				url: '',
 				abstruct:true,
-				templateUrl: '/templates/main/main.html'
+				templateUrl: '/templates/main/main.html',
+				
 			})
 			.state('main.index', {
-				url: '/index',
+				url: '/main/index',
 				templateUrl: '/templates/index/index.html',
 				controller: 'indexController',
 				resolve: {
 					des: ['$ocLazyLoad', function ($ocLazyLoad) {
-						return $ocLazyLoad.load('index');
+						return $ocLazyLoad.load('main.index');
 					}]
 				}
 			})
-				.state('main.shoppingcart', {
-				url: '/shoppingcart',
-				templateUrl: '/templates/shoppingcart/shoppingcart.html',
-				controller: 'shoppingcartController',
-				resolve: {
-					des: ['$ocLazyLoad', function ($ocLazyLoad) {
-						return $ocLazyLoad.load('shoppingcart');
-					}]
-				}
-			})
-				.state('main.my', {
-				url: '/my',
-				templateUrl: '/templates/my/my.html',
-				controller: 'myController',
-				resolve: {
-					des: ['$ocLazyLoad', function ($ocLazyLoad) {
-						return $ocLazyLoad.load('my');
-					}]
-				}
-			})
-				.state('main.shoppingMall', {
-				url: '/index',
+			.state('main.shoppingMall', {
+				url: '/main/shoppingMall',
 				templateUrl: '/templates/shoppingMall/shoppingMall.html',
 				controller: 'shoppingMallController',
 				resolve: {
 					des: ['$ocLazyLoad', function ($ocLazyLoad) {
-						return $ocLazyLoad.load('shoppingMall');
+						return $ocLazyLoad.load('main.shoppingMall');
+					}]
+				}
+			})
+			.state('main.shoppingcart', {
+				url: '/main/shoppingcart',
+				templateUrl: '/templates/shoppingcart/shoppingcart.html',
+				controller: 'shoppingcartController',
+				cache: false,
+				resolve: {
+					des: ['$ocLazyLoad', function ($ocLazyLoad) {
+						return $ocLazyLoad.load('main.shoppingcart');
+					}]
+				}
+			})
+			.state('main.my', {
+				url: '/main/my',
+				templateUrl: '/templates/my/my.html',
+				controller: 'myController',
+				cache: false,
+				resolve: {
+					des: ['$ocLazyLoad', function ($ocLazyLoad) {
+						return $ocLazyLoad.load('main.my');
 					}]
 				}
 			})

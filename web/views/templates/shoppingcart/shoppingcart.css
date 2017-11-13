@@ -1,21 +1,54 @@
- .shoppingcart img  {
-   	max-width: 220px;
-    min-width: 200px;
-    margin: 40px auto 22px auto;
-    
-   } 
-   .title{
-   	text-align: center;
-   }
-    .shoppingcart .contents{
-    	text-align: center;
-    }
-    .shoppingcart .contents>span{
-    	font-size: 20px;
-    	margin-bottom: 16px;
-    }
-    .shoppingcart .contents>p{
-    	color: #b6b6b6;
-    	margin-bottom: 200px;
-    }
-   
+.shoppingcart .font {
+	float: right;
+	width: 59%;
+	margin-top: 10px;
+}
+
+.shoppingcart .ig>img {
+	max-width: 15px;
+	min-width: 12px;
+	float: right;
+	margin-top: -21px;
+}
+
+.shoppingcart .iv>p {
+	float: left;
+}
+
+.shoppingcart span {
+	float: right;
+}
+
+.shoppingcart .item>img {
+	margin-left: -12px;
+	max-width: 128px;
+	min-width: 100px;
+}
+
+.shoppingcart .checkbox input {
+	width: 26px;
+	height: 26px;
+}
+
+.shoppingcart .iv {
+	margin-bottom: 15px;
+}
+
+.shoppingcart .fo {
+	margin-top: 76px;
+    margin-bottom: 53px;
+}
+
+.shoppingcart .fonts {
+	float: right;
+	margin-top: -34px;
+}
+
+.shoppingcart .btn {
+	float: right;
+}
+
+.shoppingcart .col-60>span {
+	float: left;
+	margin-top: 12px;
+}
