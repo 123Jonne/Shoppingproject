@@ -57,6 +57,34 @@ app.config(["$provide", "$compileProvider", "$controllerProvider", "$filterProvi
 		 				'/templates/login/loginController.js',
 		 				'/templates/login/login.css'
 		 			]
+		 		},
+		 		{
+		 			name: 'new',
+		 			files: [
+		 				'/templates/new/newController.js',
+		 				'/templates/new/new.css'
+		 			]
+		 		},
+		 		{
+		 			name: 'yj',
+		 			files: [
+		 				'/templates/yj/yjController.js',
+		 				'/templates/yj/yj.css'
+		 			]
+		 		},
+		 		{
+		 			name: 'xs',
+		 			files: [
+		 				'/templates/xs/xsController.js',
+		 				'/templates/xs/xs.css'
+		 			]
+		 		},
+		 		{
+		 			name: 'gd',
+		 			files: [
+		 				'/templates/gd/gdController.js',
+		 				'/templates/gd/gd.css'
+		 			]
 		 		}
 
 		 		

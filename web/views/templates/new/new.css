@@ -1,0 +1,67 @@
+.new .blocks{
+	text-align: center;
+	width: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+	margin: -85px auto;
+}
+ .new .line2{
+	width: 20%;
+	border-bottom: 3px solid #C0C0C0;
+	float: left;
+}
+.new .line3{
+	width: 20%;
+	border-bottom: 3px solid #C0C0C0;
+	float: right;
+}
+.new .word{
+
+	color: #000000;
+	font-size: 20px;
+}
+.new .li{
+	margin-top: 44px; 
+	border-top: none;
+	 border-bottom: none;
+}
+ .new .blocks2{
+	text-align: center;
+	width: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+.new .blocks3{
+	text-align: center;
+	width: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 30px auto 0px auto;
+}
+/*menu-open*/
+.new .blocks1{
+	text-align: center;
+	width: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+	margin: -85px 30px;
+}
+.new .row p{
+	text-align: center; margin-top: 10px;
+}
+.new .btn{
+	min-width: 0px ;
+	 height: 100px; 
+	 padding: 0; 
+	 min-height: 0px;
+}
+.new .frist{
+	margin-top: 85px;
+}

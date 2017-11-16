@@ -1,0 +1,42 @@
+
+.xs .word{
+
+	color: #000000;
+	font-size: 20px;
+}
+.xs .li{
+	margin-top: 44px; 
+	border-top: none;
+	 border-bottom: none;
+}
+ .xs .blocks2{
+	text-align: center;
+	width: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+
+
+.xs .blocks1{
+	text-align: center;
+	width: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+	margin: -85px 30px;
+}
+.xs .row p{
+	text-align: center; margin-top: 10px;
+}
+.xs .btn{
+	min-width: 0px ;
+	 height: 100px; 
+	 padding: 0; 
+	 min-height: 0px;
+}
+.xs-top{
+	text-align: center;
+}
