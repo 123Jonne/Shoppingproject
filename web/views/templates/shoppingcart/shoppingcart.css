@@ -52,3 +52,22 @@
 	float: left;
 	margin-top: 12px;
 }
+ .shoppingcart .contents img {
+ 	max-width: 220px;
+ 	min-width: 200px;
+ 	margin: 40px auto 22px auto;
+ }
+ 
+ .shoppingcart .contents {
+ 	text-align: center;
+ }
+ 
+ .shoppingcart .contents>span {
+ 	font-size: 20px;
+ 	margin-bottom: 16px;
+ }
+ 
+ .shoppingcart .contents>p {
+ 	color: #b6b6b6;
+ 	margin-bottom: 200px;
+ }

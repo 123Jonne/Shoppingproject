@@ -3,13 +3,18 @@
 			<div class="buttons">
 				<button class="button button-light icon ion-chevron-left button-clear button-large button-dark"></button>
 			</div>
-			<h3 class="title">购物车(2)</h3>
+			<h3 class="title">购物车</h3>
 			<div class="buttons">
 				<button class="button button-clear">编辑</button>
 			</div>
 
 		</ion-header-bar>
 		<ion-content class="shoppingcart">
+			<div class="contents" ng-if="isNotHas">
+				<img src="../../icon/st2_product_icon@2x.png" />
+				<span> 购物车竟然是空的</span>
+				<p>再忙，也要记得买点什么犒劳自己~</p>
+			</div>
 			<ul class="list">
 				<li class="item item-checkbox item-thumbnail-lef">
 					<label class="checkbox checkbox-assertive">

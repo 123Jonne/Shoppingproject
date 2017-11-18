@@ -11,7 +11,7 @@ const moment = require('moment');
 class RoutesController {
 	constructor (){}
 
-	homeController (req, res) {
+	rootController (req, res) {
 		res.render('index');
 	}
 
