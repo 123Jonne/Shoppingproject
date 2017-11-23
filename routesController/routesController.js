@@ -39,7 +39,7 @@ registerController (req, res) {
 				res.send(common.register.error);
 			})
 	}
-loginController (req, res) {
+ loginController (req, res) {
 		utils.addCrypto(req.body, 'pwd');
 		let loginsql = SQL.findOneForLogin(req.body);
 		service.query(loginsql)
@@ -56,6 +56,19 @@ loginController (req, res) {
 			})
 			.catch((err) => {
 				res.send([common.login.error]);
+			})
+	}
+shoppingcartController (req, res) {
+		let shopcartsql = SQL.findAllForShoppingcart(req.query);
+		service.query(shopcartsql)
+			.then((result) => {
+				result.forEach((v) => {
+					v.cartTime = moment(v.cartTime).format('YYYY-MM-DD HH:mm:ss');
+				})
+				res.send(result);
+			})
+			.catch((err) => {
+				res.json({'msg': '查询失败'})
 			})
 	}
 

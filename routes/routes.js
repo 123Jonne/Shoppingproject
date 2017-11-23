@@ -5,6 +5,7 @@ module.exports = function(app) {
 	app.get('/', RoutesController.rootController);
 	app.post('/register', RoutesController.registerController);
 	app.post('/login', RoutesController.loginController);
+	app.get('/main/shopcart/:id', RoutesController.shoppingcartController);
 	app.post('/sendSMS', RoutesController.sendSMSController);
 
 }
